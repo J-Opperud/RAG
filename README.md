@@ -170,17 +170,13 @@ The model correctly answered the question that could be answered from the suppli
 Experiment 3 — Response Timing
 
 Tests RAG-style context grounding using a fictional Acme Library context.
+Tests response timing with prompts of different lengths:
 
-The model receives instructions to:
+    short prompt
+    medium prompt
+    long prompt
 
-    answer using only the supplied context
-    avoid inventing information
-    explicitly state when the context does not contain an answer
-
-Tests both:
-
-    a question that can be answered from the context
-    a question that cannot be answered from the context
+Measures the elapsed time for each Ollama response.
     
 The short prompt took 54.75 seconds, the medium prompt took 59.33 seconds, and the long prompt took 101.69 seconds. The longer prompt had the longest response time. However, the model also generated different amounts of output for each prompt, so the results measure more than just input prompt length. Multiple trials with controlled output lengths would provide a stronger comparison.
 
